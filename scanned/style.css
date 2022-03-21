@@ -1,8 +1,13 @@
 :root {
-  --background: #696969;
+  --background: #afafaf;
   --main-colour: blue;
 }
 
 body {
   background-color: var(--background);
+}
+
+img {
+  width: 100px;
+  height: 100px;
 }
