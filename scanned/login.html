@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN FORM</title>
+    <script>
+      function myFunction(){
+        var un = document.forms["myform"]["Uname"].value;
+        var pw = document.forms["myform"]["pass"].value;
+        if(un=="student" && pw=="1234"){
+          window.location.href="scan.php";
+        }
+        else {
+          alert("Invalid");
+        }
+      }
+      </script>
+    <style>
+
+
+</style>
+  </head>
+  <body>
+    <h2>LOgin</h2>
+    <div class="div1">
+    <form name="myform" method="post">
+      <label> UserName</label>
+      <input type="text" name="Uname" class="inputText" placeholder="User Name">
+      <br><br>
+      <label>Password</label>
+      <input type="password" name="pass" class="inputText" placeholder="Password">
+      <br><br>
+      <input type="button" name="log" id="logButton" value="Login" onclick="myFunction()">
+      <br><br>
+  </body>
+</html>
