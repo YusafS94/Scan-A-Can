@@ -15,12 +15,12 @@
 
       <div class="menu">
             <ul>
-                    <li><a href="landinghome.html">Home</a></li>
-                    <li><a href="api.html">Maps</a></li>
-                    <li><a href="leaderboard.html">Leaderboard</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="scanneditems.html">Scanned Items</a></li>
-                    <li><a href="faq.html">FAQ's</a></li>
+              <li><a href="landinghome.html">Home</a></li>
+              <li><a href="api.html">Maps</a></li>
+              <li><a href="leaderboard.php">Leaderboard</a></li>
+              <li><a href="profile.php">Profile</a></li>
+              <li><a href="scan.php">Scanned Items</a></li>
+              <li><a href="faq.php">FAQ's</a></li>
             </ul>
       </div>
 
@@ -44,7 +44,7 @@
 
 <?php
 
-$con = new PDO("mysql:host=localhost;dbname=myscanner",'root','');
+$con = new PDO("mysql:host=localhost;dbname=u1975706",'u1975706','MS01apr00ms');
 
 if (isset($_POST["submit"])) {
 	$str = $_POST["search"];
@@ -98,8 +98,6 @@ if (isset($_POST["submit"])) {
 ?>
 
 
-
-
 <div class="footer">
   <div id="logo">
     <img src="./logo1.png" height="100"width="100"/>
@@ -109,11 +107,11 @@ if (isset($_POST["submit"])) {
         <ul>
           <li><a href="landinghome.html">Home</a></li>
           <li><a href="api.html">Maps</a></li>
-          <li><a href="leaderboard.html">Leaderboard</a></li>
-          <li><a href="profile.html">Profile</a></li>
-          <li><a href="scanneditems.html">Scanned Items</a></li>
-          <li><a href="faq.html">FAQ's</a></li>
-          <li><a href="faq.html">Help</a></li>
+          <li><a href="leaderboard.php">Leaderboard</a></li>
+          <li><a href="profile.php">Profile</a></li>
+          <li><a href="scan.php">Scanned Items</a></li>
+          <li><a href="faq.php">FAQ's</a></li>
+
 
         </ul>
       </div>
@@ -121,13 +119,16 @@ if (isset($_POST["submit"])) {
 <div class="social">
 <h1>Social</h1>
 <ul>
-  <li><img src="https://www.flaticon.com/free-icon/facebook_733547?term=facebook&page=1&position=8&page=1&position=8&related_id=733547&origin=tag" width="32" style="width: 32px;"></li>
-  <li><img src="https://pixabay.com/vectors/twitter-social-media-icon-social-2430933/" width="32" style="width: 32px;"></li>
-  <li><img src="https://pixabay.com/vectors/instagram-insta-instagram-logo-2935404/" width="32" style="width: 32px;"></li>
+  <li><img src="./facebook.jpeg" height="20"width="20"/></li>
+  <li><img src="./instagram.jfif" height="20"width="20"/></li>
+  <li><img src="./twitter.png" height="20"width="20"/></li>
 </ul>
 </div>
   <div class="appendix"></div>
-    <li><a href="scanneditems.html">Terms of Service</a></li>
-    <li><a href="faq.html">Privacy policy</a></li>
-    <li><a href="faq.html">Cookies</a></li>
+    <li><a href="scan.php">Terms of Service</a></li>
+    <li><a href="faq.php">Privacy policy</a></li>
+    <li><a href="faq.php">Cookies</a></li>
 </div>
+
+</body>
+</html>

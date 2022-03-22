@@ -41,6 +41,20 @@
                         <input type="text" id="from" placeholder="Origin" class="form-control">
                     </div>
                </div>
+               <script>
+
+                 var map = new google.maps.Map(document.getElementById('map'), options);
+                 //add marker
+                 var marker = new google.maps.Marker({
+                   position:{lat:53.643902,lng:-1.780360},
+                   option:option
+                 });
+                 var infoWindow = new google.maps.infoWindow({
+                   content:'<h1> My University </h1>'
+                 });
+               }</script>
+
+
                <div class="form-group">
 
                     <label for="to" class="col-xs-2 control-label"><i class="fas fa-map-marker-alt"></i></label>
