@@ -28,12 +28,14 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
   </head>
   <body>
     <div class="container">
+      <meta name="apple-mobile-web-app-capable" content="yes">
       <div class="row">
         <div class="col-md-6">
-          <video id="preview" width="100%"></video>
+          <video id="preview" width="100%" class="video-back" playsinline></video>
 
 
                   <form action="insert.php" method="post" class="form-horizontal">
@@ -48,14 +50,25 @@
     <script>
     let scanner = new Instascan.Scanner({video: document.getElementById('preview')});
     Instascan.Camera.getCameras().then(function(cameras){
-      if(cameras.length > 0){
-        scanner.start(cameras[0]);
-      } else{
-        alert('No Cameras found');
+      if (cameras.length > 1) {
+            scanner.start(cameras[1]);
+
         }
-      }).catch(function(e) {
-        console.error(e);
-      });
+        else if (cameras.length > 0) {
+            scanner.start(cameras[0]);
+        } else {
+            console.error('No cameras found.');
+        }
+        if(cameras.length > 0){
+          scanner.start(cameras[0]);
+        } else{
+          alert('No Cameras found');
+          }
+        }).catch(function(e) {
+          console.error(e);
+        });
+
+
       scanner.addListener('scan',function(c){
         document.getElementById('text').value=c;
         document.forms[0].submit();
@@ -64,6 +77,6 @@
     </script>
 
 
-    
+
   </body>
 </html>

@@ -14,12 +14,12 @@
 
       <div class="menu">
             <ul>
-                    <li><a href="landinghome.html">Home</a></li>
-                    <li><a href="api.html">Maps</a></li>
-                    <li><a href="leaderboard.html">Leaderboard</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="scanneditems.html">Scanned Items</a></li>
-                    <li><a href="faq.html">FAQ's</a></li>
+              <li><a href="landinghome.html">Home</a></li>
+              <li><a href="api.html">Maps</a></li>
+              <li><a href="leaderboard.php">Leaderboard</a></li>
+              <li><a href="profile.php">Profile</a></li>
+              <li><a href="scan.php">Scanned Items</a></li>
+              <li><a href="faq.php">FAQ's</a></li>
             </ul>
       </div>
 
@@ -59,7 +59,11 @@
     <th></th>
   </tr>
   <?php
-    $mysqli = mysqli_connect('localhost', 'root', '', 'myscanner');
+    define("DB_SERVER", "localhost");
+    define("DB_USER", "u1975706");
+    define("DB_PASS", "MS01apr00ms");
+    define("DB_NAME", "u1975706");
+    $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
     $sql = "SELECT Name, Quantity, Material, Recycle, picture, qrcode FROM recentlyscanned;"; //sql statement to extract wanted results from assignment
     $result = mysqli_query($mysqli, $sql);
     $resultCheck = mysqli_num_rows($result);
@@ -71,7 +75,7 @@
                 <td>".$row['Quantity']."</td>
                 <td>".$row['Material']."</td>
                 <td>".$row['Recycle']."</td>
-                <td><img src='".$row['picture']."' height='100' width='100'/></td>
+                <td><img src='".$row['picture']."' height='170' width='200'/></td>
                 <td>".$row['qrcode']."</td>
                 </tr>
                 "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
@@ -88,40 +92,37 @@
 
   </body>
 </html>
+<div class="footer">
+  <div id="logo">
+    <img src="./logo1.png" height="100"width="100"/>
+  </div>
+
+      <div class="col">
+        <ul>
+          <li><a href="landinghome.html">Home</a></li>
+          <li><a href="api.html">Maps</a></li>
+          <li><a href="leaderboard.php">Leaderboard</a></li>
+          <li><a href="profile.php">Profile</a></li>
+          <li><a href="scan.php">Scanned Items</a></li>
+          <li><a href="faq.php">FAQ's</a></li>
 
 
+        </ul>
+      </div>
 
-      <div class="footer">
-
-          <img src="images/logo1.png">
-
-
-            <div class="col">
-              <ul>
-                <li><a href="landinghome.html">Home</a></li>
-                <li><a href="api.html">Maps</a></li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="scanneditems.html">Scanned Items</a></li>
-                <li><a href="faq.html">FAQ's</a></li>
-                <li><a href="faq.html">Help</a></li>
-
-              </ul>
-            </div>
-
-    <div class="social">
-      <h1>Social</h1>
-      <ul>
-        <li><img src="https://www.flaticon.com/free-icon/facebook_733547?term=facebook&page=1&position=8&page=1&position=8&related_id=733547&origin=tag" width="32" style="width: 32px;"></li>
-        <li><img src="https://pixabay.com/vectors/twitter-social-media-icon-social-2430933/" height='100' width='150'/></li>
-        <li><img src="https://pixabay.com/vectors/instagram-insta-instagram-logo-2935404/" width="32" style="width: 32px;"></li>
-      </ul>
-    </div>
-        <div class="appendix"></div>
-          <li><a href="scanneditems.html">Terms of Service</a></li>
-          <li><a href="faq.html">Privacy policy</a></li>
-          <li><a href="faq.html">Cookies</a></li>
-    </div>
+<div class="social">
+<h1>Social</h1>
+<ul>
+  <li><img src="./facebook.jpeg" height="20"width="20"/></li>
+  <li><img src="./instagram.jfif" height="20"width="20"/></li>
+  <li><img src="./twitter.png" height="20"width="20"/></li>
+</ul>
+</div>
+  <div class="appendix"></div>
+    <li><a href="scan.php">Terms of Service</a></li>
+    <li><a href="faq.php">Privacy policy</a></li>
+    <li><a href="faq.php">Cookies</a></li>
+</div>
 
 </body>
 </html>

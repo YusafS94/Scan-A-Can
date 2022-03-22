@@ -1,8 +1,8 @@
 
-var myLatLng = { lat: 38.3460, lng: -0.4907 };
+var myLatLng = { lat: 53.643902, lng: -1.780360 };
 var mapOptions = {
     center: myLatLng,
-    zoom: 7,
+    zoom: 8,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 
 };
@@ -44,9 +44,7 @@ function calcRoute() {
 
 
 
-var options = {
-    types: ['(cities)']
-}
+
 
 var input1 = document.getElementById("from");
 var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
