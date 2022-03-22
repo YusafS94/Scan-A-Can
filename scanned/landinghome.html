@@ -1,115 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webpage Design</title>
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@600&family=Red+Hat+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <section class="back_image">
-      <div class="main">
-        <div class="navbar">
-            <div id="logo">
-                <img src="./logo1.png" height="100"width="100"/>
-            </div>
 
-      <div class="menu">
-            <ul>
-                    <li><a href="landinghome.html">Home</a></li>
-                    <li><a href="api.html">Maps</a></li>
-                    <li><a href="leaderboard.php">Leaderboard</a></li>
-                    <li><a href="profile.php">Profile</a></li>
-                    <li><a href="scan.php">Scanned Items</a></li>
-                    <li><a href="faq.php">FAQ's</a></li>
-            </ul>
-      </div>
+<nav>
+  <div class="nav--section">
+    <div id="logo">
+      <img class="logo--img" src="images/logo1.png"/>
+  </div>
+    <ul class="nav--links">
+      <li><a class="nav--link" href="landinghome.html">Home</a></li>
+      <li><a class="nav--link" href="api.html">Maps</a></li>
+      <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
+      <li><a class="nav--link" href="profile.html">Profile</a></li>
+      <li><a class="nav--link" href="scan.php">Scanned Items</a></li>
+      <li><a class="nav--link" href="faq.php">FAQ's</a></li>
+</ul>
+  </div>
+</nav>
 
-
-<p>---------------------------------------------------------------------------------</p>
-        </div>
-          <div class="content">
-            <h1>START <br><span>HELPING</span> <br>THE PLANET <br>NOW</h1>
-          </div>
-
-<p>---------------------------------------------------------------------------------</p>
-<h3> Please prss the button to scan your product</h3>
-
-  <section class = "button">
+<section class="hero container">
+  <div class="hero--instructions">
+  <h3>1. Click the 'Scan an Item' button below</h3>
+  <h3>2. Use your camera to scan the barcode</h3>
+  <h3>3. Sit back and let us do the rest</h3>
+  <h3>4. You've started your journey to saving the planet</h3>
+  </div>
+  <div class="hero--call-to-action">
+  <h3> Please press the button to scan your product</h3>
     <div>
-        <button onclick="window.location.href='camera.php';"> Scan item now </button>
+        <button onclick="window.location.href='camera.php';"> Scan an Item </button>
     </div>
-  <p>---------------------------------------------------------------------------------</p>
-
-
-    <section class = "button">
-      <div>
-          <h3>Already Scanned? Sign In Please!</h3>
-          <button onclick="window.location.href='login.html';"> Sign In </button>
-      </div>
-
-      <section class = "button">
-        <div>
-            <h3>Search by Name</h3>
-            <button onclick="window.location.href='manualscan.php';">Search </button>
-        </div>
-
-  <p>---------------------------------------------------------------------------------</p>
-
-   <section class="monthly">
-     <div >
-     <h3>Progress this month</h>
-
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </div>
+</section>
+<section class="already-scanned container">
+          <h3>Already Scanned?</h3>
+          <img class="scan--img" src="https://www.scandit.com/wp-content/uploads/2019/09/barcode-scanning-header-1.jpg" alt="">
+          <div class="scanned-items--button">
+          <button>Scanned items</button>
+          </div>
+</section>
+<section class="progress">
+     <h3>Progress this month</h3>
        <title>Circular Progress Bar</title>
-       <!-- Gooogle Font -->
-       <link
-         href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
-         rel="stylesheet"
-       />
-       <!-- Stylesheet -->
-       <link rel="stylesheet" href="" />
-     </head>
-     <body>
        <div class="container">
          <div class="circular-progress">
            <div class="value-container">0%</div>
          </div>
        </div>
-       <!-- Script -->
-       <script src="script.js"></script>
-  <p>---------------------------------------------------------------------------------</p>
+</section>
 
-
-      <div class="footer">
+<section class="footer">
         <div id="logo">
-          <img src="./logo1.png" height="100"width="100"/>
+          <img class="logo--img" src="images/logo1.png"/>
         </div>
-
-            <div class="col">
-              <ul>
-                <li><a href="landinghome.html">Home</a></li>
-                <li><a href="api.html">Maps</a></li>
-                <li><a href="leaderboard.php">Leaderboard</a></li>
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="scan.php">Scanned Items</a></li>
-                <li><a href="faq.php">FAQ's</a></li>
-                
-
-              </ul>
-            </div>
-
+  <div class="sign-in">
+    <button onclick="window.location.href='login.html';"> Sign In </button>
+   </div>
     <div class="social">
       <h1>Social</h1>
       <ul>
-        <li><img src="./facebook.jpeg" height="20"width="20"/></li>
-        <li><img src="./instagram.jfif" height="20"width="20"/></li>
-        <li><img src="./twitter.png" height="20"width="20"/></li>
+        <li><img src="images/facebook.jpeg" height="20"width="20"/></li>
+        <li><img src="images/instagram.jfif" height="20"width="20"/></li>
+        <li><img src="images/twitter.png" height="20"width="20"/></li>
       </ul>
     </div>
-        <div class="appendix"></div>
+    <div class="appendix">
           <li><a href="scan.php">Terms of Service</a></li>
           <li><a href="faq.php">Privacy policy</a></li>
           <li><a href="faq.php">Cookies</a></li>
     </div>
-
+    <div>
+      <h3>Search by Name</h3>
+      <button onclick="window.location.href='manualscan.php';">Search </button>
+  </div>
+</section>
+<script src="script.js"></script>
 </body>
 </html>
