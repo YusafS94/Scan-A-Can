@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webpage Design</title>
+    <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,31 +15,46 @@
   </head>
   <body>
     <nav>
-      <div class="nav--section">
-        <div id="logo">
+      <div class="nav--section container">
+        <div class="logo">
           <img class="logo--img" src="images/logo1.png" />
         </div>
-        <ul class="nav--links">
+        <span class="openbtn" onclick="openNav()">
+          <img src="images/black-24dp/2x/outline_menu_black_24dp.png" alt="" />
+        </span>
+      </div>
+      <!-- <ul class="nav--links">
           <li><a class="nav--link" href="landinghome.html">Home</a></li>
           <li><a class="nav--link" href="api.html">Maps</a></li>
           <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
           <li><a class="nav--link" href="profile.html">Profile</a></li>
           <li><a class="nav--link" href="scan.php">Scanned Items</a></li>
           <li><a class="nav--link" href="faq.php">FAQs</a></li>
-        </ul>
-      </div>
+        </ul> -->
+
       <div class="overlay" id="myNav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
           >&times;</a
         >
         <div class="overlay-content">
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+          <!-- <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a> -->
+          <ul class="nav--links">
+            <li><a class="nav--link" href="landinghome.html">Home</a></li>
+            <li><a class="nav--link" href="api.html">Maps</a></li>
+            <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
+            <li><a class="nav--link" href="profile.html">Profile</a></li>
+            <li><a class="nav--link" href="scan.php">Scanned Items</a></li>
+            <li><a class="nav--link" href="faq.php">FAQs</a></li>
+          </ul>
         </div>
       </div>
-      <span class="openbtn" onclick="openNav()">☰</span>
+
+      <!-- <span class="openbtn" onclick="openNav()">
+          <img src="images/black-24dp/2x/outline_menu_black_24dp.png" alt="" />
+        </span> -->
     </nav>
 
     <div class="container">
@@ -46,18 +63,24 @@
           <div class="hero--instructions">
             <ol class="hero--list">
               <li>Click the 'Scan an Item' button below</li>
+              <img src="images/qr_code_scanner_black_24dp.svg" alt="" />
               <li>Use your camera to scan the barcode</li>
+              <img src="images/phone_android_black_24dp.svg" alt="" />
               <li>Sit back and let us do the rest</li>
+              <img src="images/chair_black_24dp.svg" alt="" />
               <li>You've started your journey to saving the planet</li>
+              <img src="images/public_black_24dp.svg" alt="" />
             </ol>
           </div>
-          <div class="hero--call-to-action">
-            <h3>Please press the button to scan your product</h3>
-            <div>
-              <button onclick="window.location.href='camera.php';">
-                Scan an Item
-              </button>
-            </div>
+        </div>
+      </section>
+      <section class="call-to-action--section">
+        <div class="call-to-action--content">
+          <h3>Please press the button to scan your product</h3>
+          <div>
+            <button onclick="window.location.href='camera.php';">
+              Scan an Item
+            </button>
           </div>
         </div>
       </section>
@@ -65,7 +88,7 @@
         <h2>Already Scanned?</h2>
         <img
           class="scan--img"
-          src="https://www.scandit.com/wp-content/uploads/2019/09/barcode-scanning-header-1.jpg"
+          src="images/pexels-rodnae-productions-7363196.jpg"
           alt=""
         />
       </section>
@@ -75,10 +98,13 @@
             Looking for something you've scanned before?
           </h2>
           <div class="scanned-items--button">
-            <button>Scanned items</button>
+            <button onclick="window.location.href='scan.php';">
+              Scanned items
+            </button>
           </div>
         </div>
       </section>
+
       <section class="progress">
         <h2>Progress this month</h2>
         <div class="circular-progress">
@@ -86,6 +112,7 @@
         </div>
       </section>
     </div>
+
     <section class="footer">
       <div class="sign-in">
         <button onclick="window.location.href='login.html';">Sign In</button>

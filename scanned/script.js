@@ -21,7 +21,16 @@ function openNav() {
   document.getElementById("myNav").style.width = "100%";
 }
 
-/* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
+
+var map = new google.maps.Map(document.getElementById("map"), options);
+//add marker
+var marker = new google.maps.Marker({
+  position: { lat: 53.643902, lng: -1.78036 },
+  option: option,
+});
+var infoWindow = new google.maps.infoWindow({
+  content: "<h1> My University </h1>",
+});
