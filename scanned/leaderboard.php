@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQs</title>
+    <title>Leaderboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,8 +13,8 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-<body>
-      <nav>
+  <body>
+  <nav>
       <div class="nav--section container">
         <div class="logo">
           <img class="logo--img" src="images/logo1.png" />
@@ -58,96 +58,92 @@
     </nav>
 
 
-<section class="input--form container">
-  <h2>Please type in your question</h2>
-  <form method="post">
-  <label>Search</label>
-  <input type="text" name="search">
-  <input type="submit" name="submit">
-  </form>
-</section>
-
-<?php
-$con = new PDO("mysql:host=localhost;dbname=u1975706",'u1975706','MS01apr00ms');
-
-if (isset($_POST["submit"])) {
-	$str = $_POST["search"];
-	$sth = $con->prepare("SELECT * FROM `faq` WHERE Question = '$str'");
-
-	$sth->setFetchMode(PDO:: FETCH_OBJ);
-	$sth -> execute();
-
-	if($row = $sth->fetch())
-	{
-		?>
-		<br><br><br>
-
-    <section class="results--table container">
-      <h3>Below are details of the searched Contents</h3>
-          <table border = "1", align="center">
-            <tr>
-              <th>ID</th>
-              <th>Question</th>
-          <th>Answer</th>
-      
-      
-            </tr>
-      
-      
-            <tr>
-              <td style="text-align:center"><?php echo $row->ID; ?></td>
-              <td style="text-align:center"><?php echo $row->Question; ?></td>
-          <td style="text-align:center"><?php echo $row->Answer; ?></td>
-          <td></td>
-            </tr>
-      
-          </table>    
-          <h2>Scanned Successfull</h2>
-    </section>
+    <section class="kirklees--lb container">
+      <h2>Kirklees Leaderboard</h2>
 
 
+    <table border = "1", align="center">
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Picture</th>
+        <th>Items recycled uptil now</th>
+        <th>Location</th>
+      </tr>
+    <?php
+    define("DB_SERVER", "localhost");
+    define("DB_USER", "u1975706");
+    define("DB_PASS", "MS01apr00ms");
+    define("DB_NAME", "u1975706");
+    $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+        $sql = "SELECT * FROM `Users1` WHERE 1;"; //sql statement to extract wanted results from assignment
+        $result = mysqli_query($mysqli, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0){
+                while ($row = mysqli_fetch_assoc($result)){
+                    echo  "
+                    <tr>
+                    <td>".$row['UserID']."</td>
+                    <td>".$row["Name"]."</td>
+                    <td><img src='".$row['DisplayPic']."' height='100' width='100'/></td>
+                    <td>".$row["RecycledItems"]."</td>
+                    <td>".$row["Location"]."</td>
+                    </tr>
+                    "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
 
-<?php
-	}
+
+                }
+            }
+            else {
+                echo "no results";
+            }
+            $mysqli->close();
+    ?>
+  </table>
+  </section>
+
+    <section class="materials--lb container">
+      <h2>Materials Leaderboard</h2>
+
+    <table border = "1", align="center">
+      <tr>
+        <th>Ranking</th>
+        <th>Material</th>
+        <th>Winner Name</th>
+        <th>Picture</th>
+        <th>Recycled Items by this Scan-A-Canner</th>
+      </tr>
+    <?php
+    define("DB_SERVER", "localhost");
+    define("DB_USER", "u1975706");
+    define("DB_PASS", "MS01apr00ms");
+    define("DB_NAME", "u1975706");
+    $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+        $sql = "SELECT * FROM `Material` WHERE 1;"; //sql statement to extract wanted results from assignment
+        $result = mysqli_query($mysqli, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck > 0){
+                while ($row = mysqli_fetch_assoc($result)){
+                    echo  "
+                    <tr>
+                    <td>".$row["Id"]."</td>
+                    <td>".$row['Type']."</td>
+                    <td>".$row["User"]."</td>
+                    <td><img src='".$row['picture']."' height='100' width='100'/></td>
+                    <td>".$row["Items Recycled"]."</td>
+
+                    </tr>
+                    "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
 
 
-		else{
-			echo "Try another question or send question as message";
-		}
-
-
-}
-?>
-
-<section class="questions--section container centre">
-  <details class="details-example">
-      <summary>What Items can be Recycled?</summary>
-      <ul>
-          <li>Plastics, metals.......</li>
-      </ul>
-  </details>
-  
-  <details class="details-example">
-      <summary>What Items can not be Recycled?</summary>
-      <ul>
-          <li>ccoked lentils ;)</li>
-      </ul>
-  </details>
-  
-  
-  <details class="details-example">
-      <summary>How does Scan A Can make recycling easier?</summary>
-      <ul>
-          <li>Will tell in future</li>
-      </ul>
-  </details>
-  
-  <details class="details-example">
-      <summary>About the Website</summary>
-      <ul>
-          <li>Will tell in future</li>
-      </ul>
-  </details>
+                }
+            }
+            else {
+                echo "no results";
+            }
+            $mysqli->close();
+    ?>
+</table>
 </section>
 
 <section class="footer">
@@ -199,6 +195,7 @@ if (isset($_POST["submit"])) {
         <p>&copy; Copyright Scan-A-Can 2022</p>
       </div>
     </section>
+
     <script src="script.js"></script>
-</body>
-</html>
+  </body>
+  </html>
