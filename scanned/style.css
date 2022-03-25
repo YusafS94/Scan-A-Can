@@ -69,6 +69,9 @@ section {
   width: 90%;
   max-width: 700px;
 }
+.table {
+  overflow-x: auto;
+}
 
 /* Nav section */
 
@@ -284,4 +287,11 @@ nav {
 
 .results--table {
   text-align: center;
+}
+
+/* Insert php page */
+
+.check--icon {
+  width: 150px;
+  height: 150px;
 }

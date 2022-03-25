@@ -20,7 +20,7 @@
           <img class="logo--img" src="images/logo1.png" />
         </div>
         <span class="openbtn" onclick="openNav()">
-          <img src="images/black-24dp/2x/outline_menu_black_24dp.png" alt="" />
+          <img src="images/Icons/outline_menu_black_24dp.png" alt="" />
         </span>
       </div>
       <!-- <ul class="nav--links">
@@ -57,7 +57,8 @@
         </span> -->
     </nav>
 
-  <section class="successful-scan--table centre">
+  <section class="successful-scan--table table centre">
+    <img class="check--icon" src="images/icons/check_black_24dp.svg" alt="">
     <h1>Item Scanned Successfully</h1>
     <table border = "1", align="center">
     <tr>
@@ -129,13 +130,13 @@
       <div class="social">
         <ul class="social--links">
           <li>
-            <img class="social--icons" src="images/fb_social media_icon.svg" />
+            <img class="social--icons" src="images/Icons/fb_social media_icon.svg" />
           </li>
           <li>
-            <img class="social--icons" src="images/instagram logo_icon.svg" />
+            <img class="social--icons" src="images/Icons/instagram logo_icon.svg" />
           </li>
           <li>
-            <img class="social--icons" src="images/twitter logo_icon.svg" />
+            <img class="social--icons" src="images/Icons/twitter logo_icon.svg" />
           </li>
         </ul>
       </div>
