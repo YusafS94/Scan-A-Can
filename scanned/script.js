@@ -34,3 +34,13 @@ var marker = new google.maps.Marker({
 var infoWindow = new google.maps.infoWindow({
   content: "<h1> My University </h1>",
 });
+
+function myFunction() {
+  var un = document.forms["myform"]["Uname"].value;
+  var pw = document.forms["myform"]["pass"].value;
+  if (un == "student" && pw == "1234") {
+    window.location.href = "scan.php";
+  } else {
+    alert("Invalid");
+  }
+}
