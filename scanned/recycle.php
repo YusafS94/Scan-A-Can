@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>Recycle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,8 +13,8 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <nav>
+<body>
+<nav>
       <div class="nav--section container">
         <div class="logo">
           <img class="logo--img" src="images/logo1.png" />
@@ -24,13 +24,13 @@
         </span>
       </div>
       <!-- <ul class="nav--links">
-        <li><a class="nav--link" href="landinghome.html">Home</a></li>
-        <li><a class="nav--link" href="api.html">Maps</a></li>
-        <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
-        <li><a class="nav--link" href="profile.html">Profile</a></li>
-        <li><a class="nav--link" href="scan.php">Scanned Items</a></li>
-        <li><a class="nav--link" href="faq.php">FAQs</a></li>
-      </ul> -->
+          <li><a class="nav--link" href="landinghome.html">Home</a></li>
+          <li><a class="nav--link" href="api.html">Maps</a></li>
+          <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
+          <li><a class="nav--link" href="profile.html">Profile</a></li>
+          <li><a class="nav--link" href="scan.php">Scanned Items</a></li>
+          <li><a class="nav--link" href="faq.php">FAQs</a></li>
+        </ul> -->
 
       <div class="overlay" id="myNav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
@@ -38,9 +38,9 @@
         >
         <div class="overlay-content">
           <!-- <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a> -->
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a> -->
           <ul class="nav--links">
             <li><a class="nav--link" href="landinghome.html">Home</a></li>
             <li><a class="nav--link" href="api.html">Maps</a></li>
@@ -53,11 +53,14 @@
       </div>
 
       <!-- <span class="openbtn" onclick="openNav()">
-        <img src="images/black-24dp/2x/outline_menu_black_24dp.png" alt="" />
-      </span> -->
+          <img src="images/black-24dp/2x/outline_menu_black_24dp.png" alt="" />
+        </span> -->
     </nav>
-    <h1>This is Profile page</h1>
 
+    <section class="recycle--info">
+        <h1>Recycle page</h1>
+    </section>
+    
     <section class="footer">
       <div class="sign-in">
         <button onclick="window.location.href='login.html';">Sign In</button>
@@ -109,5 +112,5 @@
     </section>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
