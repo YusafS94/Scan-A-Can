@@ -12,6 +12,100 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.80);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    </style>
+
   </head>
   <body>
   <nav>
@@ -60,46 +154,184 @@
 
     <section class="kirklees--lb container">
       <h2>Kirklees Leaderboard</h2>
+      <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <table border = "1", align="center">
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Items recycled uptil now</th>
+            <th>Location</th>
+          </tr>
+        <?php
+        define("DB_SERVER", "localhost");
+        define("DB_USER", "u1975706");
+        define("DB_PASS", "MS01apr00ms");
+        define("DB_NAME", "u1975706");
+        $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+            $sql = "SELECT * FROM `Users1` WHERE UserID = 5497;"; //sql statement to extract wanted results from assignment
+            $result = mysqli_query($mysqli, $sql);
+            $resultCheck = mysqli_num_rows($result);
+            if ($resultCheck > 0){
+                    while ($row = mysqli_fetch_assoc($result)){
+                        echo  "
+                        <tr>
+                        <td>".$row['UserID']."</td>
+                        <td>".$row["Name"]."</td>
+                        <td><img src='".$row['DisplayPic']."' height='100' width='100'/></td>
+                        <td>".$row["RecycledItems"]."</td>
+                        <td>".$row["Location"]."</td>
+                        </tr>
+                        "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
 
 
-    <table border = "1", align="center">
-      <tr>
-        <th>User ID</th>
-        <th>Name</th>
-        <th>Picture</th>
-        <th>Items recycled uptil now</th>
-        <th>Location</th>
-      </tr>
-    <?php
-    define("DB_SERVER", "localhost");
-    define("DB_USER", "u1975706");
-    define("DB_PASS", "MS01apr00ms");
-    define("DB_NAME", "u1975706");
-    $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-        $sql = "SELECT * FROM `Users1` WHERE 1;"; //sql statement to extract wanted results from assignment
-        $result = mysqli_query($mysqli, $sql);
-        $resultCheck = mysqli_num_rows($result);
-        if ($resultCheck > 0){
-                while ($row = mysqli_fetch_assoc($result)){
-                    echo  "
-                    <tr>
-                    <td>".$row['UserID']."</td>
-                    <td>".$row["Name"]."</td>
-                    <td><img src='".$row['DisplayPic']."' height='100' width='100'/></td>
-                    <td>".$row["RecycledItems"]."</td>
-                    <td>".$row["Location"]."</td>
-                    </tr>
-                    "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
-
-
+                    }
                 }
-            }
-            else {
-                echo "no results";
-            }
-            $mysqli->close();
-    ?>
-  </table>
+                else {
+                    echo "no results";
+                }
+                $mysqli->close();
+        ?>
+      </table>
+      </div>
+
+      <div class="mySlides fade">
+        <table border = "1", align="center">
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Items recycled uptil now</th>
+            <th>Location</th>
+          </tr>
+        <?php
+        define("DB_SERVER", "localhost");
+        define("DB_USER", "u1975706");
+        define("DB_PASS", "MS01apr00ms");
+        define("DB_NAME", "u1975706");
+        $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+            $sql = "SELECT * FROM `Users1` WHERE UserID = 6473;"; //sql statement to extract wanted results from assignment
+            $result = mysqli_query($mysqli, $sql);
+            $resultCheck = mysqli_num_rows($result);
+            if ($resultCheck > 0){
+                    while ($row = mysqli_fetch_assoc($result)){
+                        echo  "
+                        <tr>
+                        <td>".$row['UserID']."</td>
+                        <td>".$row["Name"]."</td>
+                        <td><img src='".$row['DisplayPic']."' height='100' width='100'/></td>
+                        <td>".$row["RecycledItems"]."</td>
+                        <td>".$row["Location"]."</td>
+                        </tr>
+                        "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
+
+
+                    }
+                }
+                else {
+                    echo "no results";
+                }
+                $mysqli->close();
+        ?>
+      </table>
+      </div>
+
+      <div class="mySlides fade">
+        <table border = "1", align="center">
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Items recycled uptil now</th>
+            <th>Location</th>
+          </tr>
+        <?php
+        define("DB_SERVER", "localhost");
+        define("DB_USER", "u1975706");
+        define("DB_PASS", "MS01apr00ms");
+        define("DB_NAME", "u1975706");
+        $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+            $sql = "SELECT * FROM `Users1` WHERE UserID = 8752;"; //sql statement to extract wanted results from assignment
+            $result = mysqli_query($mysqli, $sql);
+            $resultCheck = mysqli_num_rows($result);
+            if ($resultCheck > 0){
+                    while ($row = mysqli_fetch_assoc($result)){
+                        echo  "
+                        <tr>
+                        <td>".$row['UserID']."</td>
+                        <td>".$row["Name"]."</td>
+                        <td><img src='".$row['DisplayPic']."' height='100' width='100'/></td>
+                        <td>".$row["RecycledItems"]."</td>
+                        <td>".$row["Location"]."</td>
+                        </tr>
+                        "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
+
+
+                    }
+                }
+                else {
+                    echo "no results";
+                }
+                $mysqli->close();
+        ?>
+      </table>
+      </div>
+
+      <div class="mySlides fade">
+        <table border = "1", align="center">
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Picture</th>
+            <th>Items recycled uptil now</th>
+            <th>Location</th>
+          </tr>
+        <?php
+        define("DB_SERVER", "localhost");
+        define("DB_USER", "u1975706");
+        define("DB_PASS", "MS01apr00ms");
+        define("DB_NAME", "u1975706");
+        $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+            $sql = "SELECT * FROM `Users1` WHERE UserID = 9754;"; //sql statement to extract wanted results from assignment
+            $result = mysqli_query($mysqli, $sql);
+            $resultCheck = mysqli_num_rows($result);
+            if ($resultCheck > 0){
+                    while ($row = mysqli_fetch_assoc($result)){
+                        echo  "
+                        <tr>
+                        <td>".$row['UserID']."</td>
+                        <td>".$row["Name"]."</td>
+                        <td><img src='".$row['DisplayPic']."' height='100' width='100'/></td>
+                        <td>".$row["RecycledItems"]."</td>
+                        <td>".$row["Location"]."</td>
+                        </tr>
+                        "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
+
+
+                    }
+                }
+                else {
+                    echo "no results";
+                }
+                $mysqli->close();
+        ?>
+      </table>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
   </section>
 
     <section class="materials--lb container">
@@ -197,5 +429,33 @@
     </section>
 
     <script src="script.js"></script>
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
   </body>
   </html>
