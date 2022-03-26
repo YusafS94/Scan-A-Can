@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@600&family=Red+Hat+Display:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link href="App.css" rel="stylesheet" />
+
+    <link href="style.css" rel="stylesheet" />
   </head>
 <body>
 <nav>
@@ -67,7 +67,7 @@
     <section class="map-input centre">
       <div class="container-fluid container">
 
-      
+
         <div class="col-xs-offset-2 col-xs-10">
           <button class="btn btn-info btn-lg" onclick="calcRoute();">
             <i class="fas fa-map-signs"></i>Search
