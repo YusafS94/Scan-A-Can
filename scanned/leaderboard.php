@@ -334,7 +334,7 @@
       </div>
   </section>
 
-    <section class="materials--lb container">
+    <section class="materials--lb container table">
       <h2>Materials Leaderboard</h2>
 
     <table border = "1", align="center">
