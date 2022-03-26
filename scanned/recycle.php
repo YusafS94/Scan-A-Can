@@ -60,14 +60,32 @@
 
     <section class="recycle--info">
         <h1>Recycle page</h1>
+
+
     </section>
 
+    <section class="map-input centre">
+      <div class="container-fluid container">
 
+      
+        <div class="col-xs-offset-2 col-xs-10">
+          <button class="btn btn-info btn-lg" onclick="calcRoute();">
+            <i class="fas fa-map-signs"></i>Search
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map to go here -->
     <div class="container-fluid">
       <div id="googleMap"></div>
       <div id="output"></div>
     </div>
 
+    <!-- Nearest Locations -->
+    <div class="nearby-location">
+      <h4></h4>
+    </div>
 
     <section class="footer">
       <div class="sign-in">
@@ -124,7 +142,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZZmFACCVIZ1uFrg7iVGe3MuK5jCdVOx4&libraries=places"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="Scripts/jquery-3.1.1.min.js"></script>
-    <script src="Main.js"></script>
+    <script src="Main2.js"></script>
     <script>
 
       var map = new google.maps.Map(document.getElementById('map'), options);
