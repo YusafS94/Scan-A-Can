@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link href="App.css" rel="stylesheet" />
   </head>
   <body>
     <nav>
@@ -164,6 +165,7 @@
       <div class="copyright">
         <p>&copy; Copyright Scan-A-Can 2022</p>
       </div>
+
     </section>
 
     <script src="script.js"></script>
@@ -171,5 +173,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="Scripts/jquery-3.1.1.min.js"></script>
     <script src="Main.js"></script>
+    <script>
+
+      var map = new google.maps.Map(document.getElementById('map'), options);
+      //add marker
+      var marker = new google.maps.Marker({
+        position:{lat:53.643902,lng:-1.780360},
+        option:option
+      });
+      var infoWindow = new google.maps.infoWindow({
+        content:'<h1> My University </h1>'
+      });
+    }</script>
   </body>
 </html>
