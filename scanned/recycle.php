@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link href="App.css" rel="stylesheet" />
   </head>
 <body>
 <nav>
@@ -60,7 +61,14 @@
     <section class="recycle--info">
         <h1>Recycle page</h1>
     </section>
-    
+
+
+    <div class="container-fluid">
+      <div id="googleMap"></div>
+      <div id="output"></div>
+    </div>
+
+
     <section class="footer">
       <div class="sign-in">
         <button onclick="window.location.href='login.html';">Sign In</button>
@@ -112,5 +120,22 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZZmFACCVIZ1uFrg7iVGe3MuK5jCdVOx4&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Main.js"></script>
+    <script>
+
+      var map = new google.maps.Map(document.getElementById('map'), options);
+      //add marker
+      var marker = new google.maps.Marker({
+        position:{lat:53.643902,lng:-1.780360},
+        option:option
+      });
+      var infoWindow = new google.maps.infoWindow({
+        content:'<h1> My University </h1>'
+      });
+    }</script>
 </body>
 </html>
