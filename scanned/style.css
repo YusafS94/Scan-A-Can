@@ -21,6 +21,7 @@ body {
   font-size: 16px;
 }
 
+/* General Styling */
 h1,
 h2,
 h3,
@@ -50,10 +51,6 @@ button {
 a {
   color: var(--light-colour);
 }
-/* img {
-  width: 100px;
-  height: 100px;
-} */
 section {
   display: flex;
   flex-direction: column;
@@ -73,8 +70,7 @@ section {
   overflow-x: auto;
 }
 
-/* Nav section */
-
+/* Nav Section */
 nav {
   display: flex;
   justify-content: center;
@@ -111,7 +107,7 @@ nav {
   width: 100px;
 }
 
-/* Overlay */
+/* Curtain Menu Overlay */
 .openbtn {
   cursor: pointer;
 }
@@ -161,61 +157,8 @@ nav {
     right: 35px;
   }
 }
-/* Hero section */
 
-.hero {
-  text-align: center;
-}
-.hero--content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* height: 220px; */
-}
-.hero--list {
-  line-height: 2rem;
-}
-.icons {
-  width: 80px;
-  height: 80px;
-  margin: 0.5rem;
-}
-
-/* Call to action */
-.call-to-action--content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  /* padding: 4rem 0; */
-  text-align: center;
-  height: 100px;
-}
-
-/* Already scanned section */
-.scan--img {
-  margin: 1rem;
-  max-width: 100%;
-}
-/* Looking for scanned section */
-.looking-for-scanned--heading {
-  text-align: center;
-}
-.looking-for-scanned-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  /* padding: 2rem; */
-}
-/* Search section */
-
-/* Progress section */
-.circular-progress {
-  padding: 10rem 4rem;
-  /* margin: 2rem; */
-}
-/* Footer section */
+/* Footer Section */
 
 .footer {
   display: flex;
@@ -273,13 +216,71 @@ nav {
   padding: 0.5rem;
 }
 
-/* Maps api page */
+/* LANDING/HOME PAGE */
+/* ============================================================== */
+
+/* Hero section */
+
+.hero {
+  text-align: center;
+}
+.hero--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 220px; */
+}
+.hero--list {
+  line-height: 2rem;
+}
+.icons {
+  width: 80px;
+  height: 80px;
+  margin: 0.5rem;
+}
+
+/* Call to Action */
+.call-to-action--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 4rem 0; */
+  text-align: center;
+  height: 100px;
+}
+
+/* Already Scanned Section */
+.scan--img {
+  margin: 1rem;
+  max-width: 100%;
+}
+/* Looking for Scanned Section */
+.looking-for-scanned--heading {
+  text-align: center;
+}
+.looking-for-scanned-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 2rem; */
+}
+/* Progress Section */
+.circular-progress {
+  padding: 10rem 4rem;
+  /* margin: 2rem; */
+}
+
+/* MAPS API PAGE */
+/* ============================================================== */
 
 .alert-info {
   text-align: center;
 }
 
-/* FAQs page */
+/* FAQs PAGE */
+/* ============================================================== */
 
 .input--form {
   text-align: center;
@@ -289,9 +290,20 @@ nav {
   text-align: center;
 }
 
-/* Insert php page */
+/* INSERT PHP PAGE */
+/* ============================================================== */
 
 .check--icon {
   width: 150px;
   height: 150px;
+}
+
+/* PROFILE PAGE */
+/* ============================================================== */
+
+/* Intro Profile Section */
+
+.profile--picture {
+  max-width: 100%;
+  height: 50px;
 }
