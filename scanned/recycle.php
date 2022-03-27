@@ -69,8 +69,9 @@
 
 
         <div class="col-xs-offset-2 col-xs-10">
+          <h3>Location for where these items can be recycled:</h3>
           <button class="btn btn-info btn-lg" onclick="calcRoute();">
-            <i class="fas fa-map-signs"></i>Search
+            <i class="fas fa-map-signs"></i>Directions
           </button>
         </div>
       </div>
