@@ -446,6 +446,8 @@ nav {
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
   padding-bottom: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .profile--picture {
   max-width: 100%;
@@ -456,6 +458,10 @@ nav {
   margin: 0 auto;
 }
 .recycle--card {
+  margin: 0 auto;
+}
+.recycling--rate {
+  max-width: 600px;
   margin: 0 auto;
 }
 .recycle--card--content {
@@ -581,6 +587,8 @@ nav {
 /* Materials Recycled Section */
 .materials--recycled {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .materials--recycled--card {
   background-color: var(--card-colour);
