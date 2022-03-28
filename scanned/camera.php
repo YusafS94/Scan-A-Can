@@ -25,7 +25,7 @@
           <img class="logo--img" src="images/logo1.png" />
         </div>
         <div class="nav--links--section">
-          <ul class="nav--links">
+          <ul class="nav--links desktop--nav--links">
             <li><a class="nav--link" href="landinghome.html">Home</a></li>
             <li><a class="nav--link" href="api.html">Maps</a></li>
             <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
