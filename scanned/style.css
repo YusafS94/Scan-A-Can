@@ -639,6 +639,7 @@ nav {
   /* Footer Section */
   .footer {
     flex-direction: row;
+    /* height: 275px; */
   }
   .footer--content {
     display: flex;
@@ -657,6 +658,11 @@ nav {
   .footer--bottom {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .footer--alt {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
   .sitemap {
     text-align: left;
