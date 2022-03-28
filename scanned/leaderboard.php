@@ -95,7 +95,7 @@
   <nav>
       <div class="nav--section container">
         <div class="logo">
-          <img class="logo--img" src="images/logo1.png" />
+          <img class="logo--img" src="images/Updated_logo.png" />
         </div>
         <div class="nav--links--section">
           <ul class="nav--links desktop--nav--links">
@@ -361,52 +361,71 @@
 </section>
 
 <section class="footer">
-      <div class="sign-in">
-        <button onclick="window.location.href='login.html';">Sign In</button>
-      </div>
-      <div id="logo">
-        <img class="logo--img" src="images/logo1.png" />
-      </div>
-      <div class="sitemap">
-        <ul class="sitemap--links--left">
-          <li><a href="scan.php">Scanned Items</a></li>
-          <li><a href="api.html">Maps</a></li>
-          <li><a href="leaderboard.php">Leaderboard</a></li>
-        </ul>
-        <ul class="sitemap--links--right">
-          <li><a href="profile.html">Profile</a></li>
-          <li><a href="faq.php">FAQs</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-      </div>
-      <div class="social">
-        <ul class="social--links">
-          <li>
-            <img class="social--icons" src="images/Icons/fb_social media_icon.svg" />
-          </li>
-          <li>
-            <img class="social--icons" src="images/Icons/instagram logo_icon.svg" />
-          </li>
-          <li>
-            <img class="social--icons" src="images/Icons/twitter logo_icon.svg" />
-          </li>
-        </ul>
-      </div>
-      <div class="appendix">
-        <ul class="appendix--links">
-          <li><a href="#">Privacy policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
-        <ul class="appendix--links">
-          <li><a href="#">Cookies</a></li>
-        </ul>
-      </div>
-      <div class="search">
-        <h3>Search by Name</h3>
-        <button onclick="window.location.href='manualscan.php';">Search</button>
-      </div>
-      <div class="copyright">
-        <p>&copy; Copyright Scan-A-Can 2022</p>
+      <div class="container">
+        <div class="footer--top">
+          <div class="sign-in">
+            <button onclick="window.location.href='login.html';">
+              Sign In
+            </button>
+          </div>
+          <div id="logo">
+            <img class="logo--img" src="images/Updated_logo.png" />
+          </div>
+          <div class="sitemap">
+            <ul class="sitemap--links--left">
+              <li><a href="scan.php">Scanned Items</a></li>
+              <li><a href="api.html">Maps</a></li>
+              <li><a href="leaderboard.php">Leaderboard</a></li>
+            </ul>
+            <ul class="sitemap--links--right">
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="faq.php">FAQs</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul class="social--links">
+              <li>
+                <img
+                  class="social--icons"
+                  src="images/Icons/fb_social media_icon.svg"
+                />
+              </li>
+              <li>
+                <img
+                  class="social--icons"
+                  src="images/Icons/instagram logo_icon.svg"
+                />
+              </li>
+              <li>
+                <img
+                  class="social--icons"
+                  src="images/Icons/twitter logo_icon.svg"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer--bottom">
+          <div class="appendix">
+            <ul class="appendix--links">
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+            <ul class="appendix--links">
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+          <div class="search">
+            <h3>Search by Name</h3>
+            <button onclick="window.location.href='manualscan.php';">
+              Search
+            </button>
+          </div>
+          <div class="copyright">
+            <p>&copy; Copyright Scan-A-Can 2022</p>
+          </div>
+        </div>
       </div>
     </section>
 

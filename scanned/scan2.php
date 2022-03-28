@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recycle</title>
+    <title>Scan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@600&family=Red+Hat+Display:wght@400;600&display=swap"
       rel="stylesheet"
     />
-
-    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 <body>
 <nav>
@@ -53,38 +52,51 @@
         </div>
       </div>
     </nav>
+  <section class="scanned--items--table table container centre">
+    <table border = "1", align="center">
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Material</th>
+      <th>Recycleable?</th>
+      <th>Picture</th>
+      <th>QR-Code</th>
+      <th></th>
+    </tr>
+    <?php
+      define("DB_SERVER", "localhost");
+      define("DB_USER", "u1975706");
+      define("DB_PASS", "MS01apr00ms");
+      define("DB_NAME", "u1975706");
+      $mysqli = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+      $sql = "SELECT Name, Quantity, Material, Recycle, picture, qrcode FROM recentlyscanned;"; //sql statement to extract wanted results from assignment
+      $result = mysqli_query($mysqli, $sql);
+      $resultCheck = mysqli_num_rows($result);
+      if ($resultCheck > 0){
+              while ($row = mysqli_fetch_assoc($result)){
+                  echo  "
+                  <tr>
+                  <td>".$row['Name']."</td>
+                  <td>".$row['Quantity']."</td>
+                  <td>".$row['Material']."</td>
+                  <td>".$row['Recycle']."</td>
+                  <td><img src='".$row['picture']."' height='170' width='200'/></td>
+                  <td>".$row['qrcode']."</td>
+                  <td><button onclick="window.location.href='recycle.php';">Recycle</button>
+                  </td>
+                  </tr>
+                  "; //this show dogs name, breed name, score obtained by each dog, clickable link to get to details page, clickable link to mail the shown email
+              }
+          }
+          else {
+              echo "no results";
+          }
+          $mysqli->close();
+    ?>
+      </table>
+  </section>
 
-    <section class="recycle--info">
-        <h1>Recycle page</h1>
-
-
-    </section>
-
-    <section class="map-input centre">
-      <div class="container-fluid container">
-
-
-        <div class="col-xs-offset-2 col-xs-10">
-          <h3>Location for where these items can be recycled:</h3>
-          <button class="btn btn-info btn-lg" onclick="calcRoute();">
-            <i class="fas fa-map-signs"></i>Directions
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Map to go here -->
-    <div class="container-fluid">
-      <div id="googleMap"></div>
-      <div id="output"></div>
-    </div>
-
-    <!-- Nearest Locations -->
-    <div class="nearby-location">
-      <h4></h4>
-    </div>
-
-    <section class="footer">
+  <section class="footer">
       <div class="container">
         <div class="footer--top">
           <div class="sign-in">
@@ -93,7 +105,7 @@
             </button>
           </div>
           <div id="logo">
-            <img class="logo--img" src="images/Updated_logo.png" />
+            <img class="logo--img" src="images/logo1.png" />
           </div>
           <div class="sitemap">
             <ul class="sitemap--links--left">
@@ -154,21 +166,6 @@
     </section>
 
     <script src="script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZZmFACCVIZ1uFrg7iVGe3MuK5jCdVOx4&libraries=places"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="Scripts/jquery-3.1.1.min.js"></script>
-    <script src="Main2.js"></script>
-    <script>
 
-      var map = new google.maps.Map(document.getElementById('map'), options);
-      //add marker
-      var marker = new google.maps.Marker({
-        position:{lat:53.643902,lng:-1.780360},
-        option:option
-      });
-      var infoWindow = new google.maps.infoWindow({
-        content:'<h1> My University </h1>'
-      });
-    }</script>
 </body>
 </html>
