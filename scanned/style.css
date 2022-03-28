@@ -110,9 +110,10 @@ nav {
   list-style: none;
   text-align: center;
   padding: 0;
+}
+.desktop--nav--links {
   display: none;
 }
-
 .nav--links .nav--link {
   text-decoration: none;
 }
