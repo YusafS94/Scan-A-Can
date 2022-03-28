@@ -1,4 +1,5 @@
 :root {
+  /* Colours */
   --background: #fff0e6;
   --main-colour: #136f63;
   --card-colour: #136f6386;
@@ -7,9 +8,29 @@
   --yellow-colour: #eda65b;
   --brown-colour: #352208;
   --menu-colour: #000000de;
+
+  /* Typography */
   --font-family--Open-Sans: "Open Sans", sans-serif;
   --font-family--Quicksand: "Quicksand", sans-serif;
   --font-family--Red-Hat-Display: "Red Hat Display", sans-serif;
+  --h1: 96px;
+  --h2: 60px;
+  --h3: 48px;
+  --h4: 34px;
+  --h5: 24px;
+  --h6: 20px;
+  --subtitle-1: 16px;
+  --subtitle-2: 14px;
+  --body-1: 16px;
+  --body-2: 14px;
+  --button: 14px;
+  --caption: 12px;
+  --overline: 10px;
+
+  /* Font Weights */
+  --regular: 400;
+  --semibold: 600;
+  --bold: 700;
 }
 * + * {
   padding: 0;
@@ -171,6 +192,14 @@ nav {
   background-color: var(--main-colour);
   margin-bottom: 0;
 }
+.footer--top,
+.footer--bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
 .sign-in {
   margin: 0.5rem 0;
 }
@@ -224,7 +253,7 @@ nav {
 /* LANDING/HOME PAGE */
 /* ============================================================== */
 
-/* Hero section */
+/* Hero Section */
 
 .hero {
   text-align: center;
@@ -238,9 +267,9 @@ nav {
 .hero--list {
   line-height: 2rem;
 }
-.icons {
-  width: 80px;
-  height: 80px;
+.hero--icons {
+  width: 40px;
+  height: 40px;
   margin: 0.5rem;
 }
 
@@ -260,20 +289,24 @@ nav {
   margin: 1rem;
   max-width: 100%;
 }
-/* Looking for Scanned Section */
-.looking-for-scanned--heading {
+.already--scanned--content {
   text-align: center;
+  margin: 1rem auto;
 }
-.looking-for-scanned-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  /* padding: 2rem; */
+.already--scanned--text {
+  margin-bottom: 1rem;
 }
+
 /* Progress Section */
+
+.progress--heading {
+  margin-bottom: 1rem;
+}
 .circular-progress {
-  padding: 10rem 4rem;
+  /* padding: 10rem 4rem; */
+  height: 500px;
+  width: 40%;
+  margin: 0 auto;
   /* margin: 2rem; */
 }
 
@@ -330,6 +363,16 @@ nav {
 
 .alert-info {
   text-align: center;
+  font-size: var(--h5);
+  color: black;
+}
+.maps--button {
+  background-color: white;
+  color: black;
+  box-shadow: 2px 2px 5px 1px black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin: 1rem auto;
 }
 
 /* FAQs PAGE */
@@ -545,5 +588,80 @@ nav {
     display: flex;
     align-items: center;
     margin-left: 1rem;
+  }
+  /* Footer Section */
+  .footer {
+    flex-direction: row;
+  }
+  .footer--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  .footer--top {
+    border-bottom: 2px solid black;
+  }
+  .footer--bottom {
+    justify-content: center;
+  }
+  .footer--top,
+  .footer--bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .sitemap {
+    text-align: left;
+  }
+  .search {
+    order: 1;
+    flex-grow: 1;
+  }
+  .appendix {
+    order: 2;
+    flex-grow: 2;
+  }
+  .copyright {
+    order: 3;
+    flex-grow: 1;
+  }
+
+  /* LANDING/HOME PAGE */
+  /* ============================================================== */
+
+  /* Hero Section */
+
+  .hero--list {
+    font-size: var(--h4);
+  }
+  .hero--icons {
+  }
+  /* Already Scanned Section */
+  .already-scanned {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .already-scanned--heading {
+    font-size: var(--h3);
+  }
+  .scan--img {
+    max-width: 50%;
+  }
+
+  /* Progress Section */
+  .circular-progress {
+    width: 100%;
+    height: 100px;
+  }
+
+  /* MAPS PAGE */
+  /* ============================================================== */
+
+  /* Map Input Section */
+  .map--input--section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
   }
 }
