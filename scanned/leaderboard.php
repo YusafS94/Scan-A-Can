@@ -73,22 +73,6 @@
       top: 0;
     }
 
-    /* The dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-
-    .active, .dot:hover {
-      background-color: #717171;
-    }
-
     /* Fading animation */
     .fade {
       animation-name: fade;
@@ -114,7 +98,7 @@
           <img class="logo--img" src="images/logo1.png" />
         </div>
         <div class="nav--links--section">
-          <ul class="nav--links">
+          <ul class="nav--links desktop--nav--links">
             <li><a class="nav--link" href="landinghome.html">Home</a></li>
             <li><a class="nav--link" href="api.html">Maps</a></li>
             <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
@@ -316,20 +300,22 @@
       </table>
       </div>
 
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
+      <!-- <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a> -->
 
       </div>
       <br>
 
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
-  </section>
 
+  </section>
+      <div class="container">
+        <div class="pagination" style="text-align:center">
+          <div class="dot" onclick="currentSlide(1)"><h3 class="dot--heading">1st</h3></div>
+          <div class="dot" onclick="currentSlide(2)"><h3>2nd</h3></div>
+          <div class="dot" onclick="currentSlide(3)"><h3>3rd</h3></div>
+          <div class="dot" onclick="currentSlide(4)"><h3>4th</h3></div>
+        </div>
+      </div>
     <section class="materials--lb container table">
       <h2>Materials Leaderboard</h2>
 
