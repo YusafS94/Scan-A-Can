@@ -124,7 +124,7 @@
   <section class="recycle--call-to-action centre">
     <div class="recycle--call-to-action-content container">
       <div class="recycle--cta">
-        <h3>Click below to see where your closest recycle point is.</h3>
+        <h3>Find closest recycling point.</h3>
         <button onclick="window.location.href='recycle.php';">Recycle</button>
       </div>
       <div class="progress--cta">
