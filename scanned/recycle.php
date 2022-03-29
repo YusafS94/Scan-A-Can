@@ -65,7 +65,7 @@
 
         <div class="col-xs-offset-2 col-xs-10">
           <h3>Closest recycle point:</h3>
-          <button class="btn btn-info btn-lg" onclick="calcRoute();">
+          <button class="btn btn-info btn-lg button--main" onclick="calcRoute();">
             <i class="fas fa-map-signs"></i>Directions
           </button>
         </div>
