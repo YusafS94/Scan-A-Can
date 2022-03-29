@@ -52,6 +52,14 @@
         </div>
       </div>
     </nav>
+
+  <section>
+  <div class="container centre">
+        <h2>Scanned items history.</h2>
+        <h3>Here you can view previously scanned items and recycle from the list without scanning again.</h3>
+        <button class="button--main" onclick="window.location.href='recycle.php';">Recycle</button>
+      </div>
+  </section>
   <section class="scanned--items--table table container centre">
     <table border = "1", align="center">
     <tr>
