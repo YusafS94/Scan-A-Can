@@ -94,7 +94,7 @@
       </table>
   </section>
 
-  <section class="footer footer--alt">
+  <section class="footer footer--scanned">
       <div class="container">
         <div class="footer--top">
           <div class="sign-in">

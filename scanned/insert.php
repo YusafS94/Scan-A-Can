@@ -54,7 +54,7 @@
     </nav>
 
   <section class="successful-scan--table table centre">
-    <img class="check--icon" src="images/icons/check_black_24dp.svg" alt="">
+    <img class="check--icon" src="images/Icons/check_black_24dp.svg" alt="Tick Icon">
     <h1>Item Scanned Successfully</h1>
     <table border = "1", align="center">
     <tr>
@@ -100,8 +100,42 @@
     </table>
   </section>
 
-  <section class="recycle--call-to-action">
-    <button onclick="window.location.href='recycle.php';">Recycle</button>
+  <section class="recycled--parts--section">
+    <div class="can-be-recycled container">
+      <img class="recycle--icons" src="images/Icons/check_black_24dp.svg" alt="Tick Icon">
+      <h3>Recycle at home:</h3>
+      <ul>
+        <li>Bottle cap: Brown bin.</li>
+      </ul>
+      <h3>Recycle at recycle point:</h3>
+      <ul>
+        <li>Bottle body: See recycle points.</li>
+      </ul>
+    </div>
+    <div class="cant-be-recycled container">
+      <img class="recycle--icons" src="images/Icons/close_black_24dp.svg" alt="Cross Icon">
+    <h3>Cannot be recycled:</h3>
+      <ul>
+        <li>Plastic label.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="recycle--call-to-action centre">
+    <div class="recycle--call-to-action-content container">
+      <div class="recycle--cta">
+        <h3>Click below to see where your closest recycle point is.</h3>
+        <button onclick="window.location.href='recycle.php';">Recycle</button>
+      </div>
+      <div class="progress--cta">
+        <h3>Check your progress.</h3>
+        <button onclick="window.location.href='profile.html';">Progress</button>
+      </div>
+      <div class="scan-again--cta">
+        <h3>Scan again.</h3>
+        <button onclick="window.location.href='camera.php';">Scan</button>
+      </div>    
+    </div>
   </section>
 
   <section class="footer">

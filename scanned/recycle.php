@@ -55,9 +55,8 @@
     </nav>
 
     <section class="recycle--info">
-        <h1>Recycle page</h1>
-
-
+        <h1>Recycling map</h1>
+        <h3>View your closest recycling points for scanned items or recyclable parts.</h3>
     </section>
 
     <section class="map-input centre">
@@ -65,7 +64,7 @@
 
 
         <div class="col-xs-offset-2 col-xs-10">
-          <h3>Location for where these items can be recycled:</h3>
+          <h3>Closest recycle point:</h3>
           <button class="btn btn-info btn-lg" onclick="calcRoute();">
             <i class="fas fa-map-signs"></i>Directions
           </button>

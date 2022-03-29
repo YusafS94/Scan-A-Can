@@ -117,36 +117,41 @@ if (isset($_POST["submit"])) {
 
 <section class="questions--section container centre">
   <details class="details-example">
-      <summary>What Items can be Recycled?</summary>
+      <summary>What items can be recycled?</summary>
       <ul>
-          <li>Plastics, metals.......</li>
+          <li>Plastics.</li>
+          <li>Cardboard.</li>
+          <li>Glass.</li>
+          <li>Paper.</li>
       </ul>
   </details>
   
   <details class="details-example">
-      <summary>What Items can not be Recycled?</summary>
+      <summary>What items can not be recycled?</summary>
       <ul>
-          <li>ccoked lentils ;)</li>
+          <li>Styrofoam.</li>
+          <li>Dirty cardboard/plastic.</li>
       </ul>
   </details>
   
   
   <details class="details-example">
-      <summary>How does Scan A Can make recycling easier?</summary>
+      <summary>How does Scan-A-Can make recycling easier?</summary>
       <ul>
-          <li>Will tell in future</li>
+          <li>Helping increase awareness and knowledge of recycling.</li>
+          <li>Informing users of how to recycle tricky items.</li>
+          <li>Making it easier to know what can and can't be recycled</li>
+          <li>Making it quicker and easier to bulk recycle and track recycled items progress.</li>
       </ul>
   </details>
   
   <details class="details-example">
-      <summary>About the Website</summary>
-      <ul>
-          <li>Will tell in future</li>
-      </ul>
+      <summary>About the website</summary>
+      <p>This website was created as part of a university project at the University of Huddersfield.</p>
   </details>
 </section>
 
-<section class="footer">
+<section class="footer footer--alt">
       <div class="container">
         <div class="footer--top">
           <div class="sign-in">

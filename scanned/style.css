@@ -432,6 +432,42 @@ nav {
   width: 150px;
   height: 150px;
 }
+.recycled--parts--section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+}
+.can-be-recycled,
+.cant-be-recycled {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--light-colour);
+  width: 90%;
+  padding: 0.5rem;
+}
+.cant-be-recycled {
+  background-color: var(--background);
+}
+.recycle--icons {
+  width: 60px;
+  height: 60px;
+}
+.recycle--call-to-action-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.recycle--cta,
+.scan-again--cta,
+.progress--cta {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
 /* PROFILE PAGE */
 /* ============================================================== */
@@ -475,6 +511,7 @@ nav {
   padding: 0.5rem;
   height: 70px;
   width: 70px;
+  border-radius: 10px;
 }
 .day--streak--heading {
   text-align: center;
@@ -571,7 +608,8 @@ nav {
 /* Rank Section */
 
 .rank--content {
-  background-color: var(--main-colour);
+  /* background-color: var(--main-colour); */
+  background-image: url("images/rank-background.png");
   height: 200px;
   width: 200px;
   padding: 1rem;
@@ -664,6 +702,9 @@ nav {
     bottom: 0;
     width: 100%;
   }
+  .footer--scanned {
+    position: relative;
+  }
   .sitemap {
     text-align: left;
   }
@@ -716,5 +757,16 @@ nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
+  }
+
+  /* INSERT PHP PAGE */
+  /* ============================================================== */
+  .recycled--parts--section {
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .recycle--call-to-action-content {
+    flex-direction: row;
   }
 }
