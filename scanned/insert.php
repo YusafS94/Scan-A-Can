@@ -125,15 +125,15 @@
     <div class="recycle--call-to-action-content container">
       <div class="recycle--cta">
         <h3>Find closest recycling point.</h3>
-        <button onclick="window.location.href='recycle.php';">Recycle</button>
+        <button class="button--main" onclick="window.location.href='recycle.php';">Recycle</button>
       </div>
       <div class="progress--cta">
         <h3>Check your progress.</h3>
-        <button onclick="window.location.href='profile.html';">Progress</button>
+        <button class="button--alt" onclick="window.location.href='profile.html';">Progress</button>
       </div>
       <div class="scan-again--cta">
         <h3>Scan again.</h3>
-        <button onclick="window.location.href='camera.php';">Scan</button>
+        <button class="button--alt" onclick="window.location.href='camera.php';">Scan</button>
       </div>    
     </div>
   </section>
