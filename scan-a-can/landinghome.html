@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@600&family=Red+Hat+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav--section container">
+        <div class="logo">
+          <img class="logo--img" src="images/Updated_logo.png" />
+        </div>
+        <div class="nav--links--section">
+          <ul class="nav--links desktop--nav--links">
+            <li><a class="nav--link" href="landinghome.html">Home</a></li>
+            <li><a class="nav--link" href="api.html">Maps</a></li>
+            <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
+            <li><a class="nav--link" href="profile.html">Profile</a></li>
+            <li><a class="nav--link" href="scan.php">Scanned Items</a></li>
+            <li><a class="nav--link" href="faq.php">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="search--icon">
+          <img src="images/Icons/search_black_24dp.svg" alt="" />
+        </div>
+        <span class="openbtn" onclick="openNav()">
+          <img src="images/Icons/outline_menu_black_24dp.png" alt="" />
+        </span>
+      </div>
+      <div class="overlay" id="myNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <ul class="nav--links">
+            <li><a class="nav--link" href="landinghome.html">Home</a></li>
+            <li><a class="nav--link" href="api.html">Maps</a></li>
+            <li><a class="nav--link" href="leaderboard.php">Leaderboard</a></li>
+            <li><a class="nav--link" href="profile.html">Profile</a></li>
+            <li><a class="nav--link" href="scan.php">Scanned Items</a></li>
+            <li><a class="nav--link" href="faq.php">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <section class="hero">
+        <div class="hero--content">
+          <div class="hero--instructions">
+            <ol class="hero--list">
+              <li>Click the 'Scan an Item' button below</li>
+              <img
+                class="hero--icons"
+                src="images/Icons/qr_code_scanner_black_24dp.svg"
+                alt=""
+              />
+              <li>Use your camera to scan the QR code</li>
+              <img
+                class="hero--icons"
+                src="images/Icons/phone_android_black_24dp.svg"
+                alt=""
+              />
+              <li>Sit back and let us do the rest</li>
+              <img
+                class="hero--icons"
+                src="images/Icons/chair_black_24dp.svg"
+                alt=""
+              />
+              <li>You've started your journey to saving the planet</li>
+              <img
+                class="hero--icons"
+                src="images/Icons/public_black_24dp.svg"
+                alt=""
+              />
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="call-to-action--section">
+        <div class="call-to-action--content">
+          <h3>Please press the button to scan your product</h3>
+          <div>
+            <button
+              class="button--main"
+              onclick="window.location.href='camera.php';"
+            >
+              Scan an Item
+            </button>
+            <div class="search">
+              <h3>Alternatively search by name</h3>
+              <button
+                class="button--alt"
+                onclick="window.location.href='manualscan.php';"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="already-scanned">
+        <div class="already--scanned--content">
+          <div class="already--scanned--text">
+            <h2 class="already-scanned--heading">Already Scanned?</h2>
+            <h4 class="already-scanned--paragraph">
+              If you have already scanned we have made it easy for you. Look at
+              the list of previously scanned items by pressing the button below
+            </h4>
+          </div>
+          <div class="scanned-items--button">
+            <button
+              class="button--main"
+              onclick="window.location.href='scan.php';"
+            >
+              Scanned items
+            </button>
+          </div>
+        </div>
+        <img
+          class="scan--img"
+          src="images/pexels-rodnae-productions-7363196.jpg"
+          alt=""
+        />
+      </section>
+
+      <section class="progress">
+        <div class="container centre">
+          <h2 class="progress--heading">Progress this month</h2>
+          <div class="circular-progress">
+            <div class="value-container">0%</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="meter orange nostripes">
+        <span style="width: 33.3%"></span>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="container">
+        <div class="footer--top">
+          <div class="sign-in">
+            <button onclick="window.location.href='login.html';">
+              Sign In
+            </button>
+          </div>
+          <div id="logo">
+            <img class="logo--img" src="images/Updated_logo.png" />
+          </div>
+          <div class="sitemap">
+            <ul class="sitemap--links--left">
+              <li><a href="scan.php">Scanned Items</a></li>
+              <li><a href="api.html">Maps</a></li>
+              <li><a href="leaderboard.php">Leaderboard</a></li>
+            </ul>
+            <ul class="sitemap--links--right">
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="faq.php">FAQs</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul class="social--links">
+              <li>
+                <img
+                  class="social--icons"
+                  src="images/Icons/fb_social media_icon.svg"
+                />
+              </li>
+              <li>
+                <img
+                  class="social--icons"
+                  src="images/Icons/instagram logo_icon.svg"
+                />
+              </li>
+              <li>
+                <img
+                  class="social--icons"
+                  src="images/Icons/twitter logo_icon.svg"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer--bottom">
+          <div class="appendix">
+            <ul class="appendix--links">
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+            <ul class="appendix--links">
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+          <div class="search">
+            <h3>Search by Name</h3>
+            <button onclick="window.location.href='manualscan.php';">
+              Search
+            </button>
+          </div>
+          <div class="copyright">
+            <p>&copy; Copyright Scan-A-Can 2022</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
